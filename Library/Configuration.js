@@ -23,8 +23,8 @@ export class Configuration {
     //let defaultConfig = this.loadFile("./Config/default.json"); 
     //let localConfig = this.loadFile("./Config/local.json");
     //this.data = this.loadFile("./Config/production.json");
+    this.data = path.resolve(new URL('Config/production.json', import.meta.url).pathname);
     
-    this.data = this.loadFile(path.join(__dirname, 'Config', 'production.json'));
     //this.data = Object.assign(defaultConfig, localConfig, productionConfig);
     if (this.Log > 2) {
       console.log(this.data);
