@@ -4,9 +4,17 @@ Integration with Microsoft Azure Speech Synthesis for local-area playback of gen
 
 # Running
 
-1. npm install
-2. npm start -- --client --server # to test
-3. npm start -- --client # for local desktop playback
+cd ~
+wget https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
+sh install.sh
+source ~/.bashrc
+nvm install v20.10.0
+sudo apt install libasound2-dev -y
+cd ~
+git clone https://github.com/GenXP/NodeAzureTTSPlayer.git
+cd NodeAzureTTSPlayer
+npm install
+node app.js
 
 # Configuration
 
