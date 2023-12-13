@@ -1,4 +1,5 @@
 import { existsSync, readFileSync } from "fs";
+import path from 'path';
 
 export class Configuration {
   data = {}
@@ -21,8 +22,9 @@ export class Configuration {
     //FIXME
     //let defaultConfig = this.loadFile("./Config/default.json"); 
     //let localConfig = this.loadFile("./Config/local.json");
-    this.data = this.loadFile("./Config/production.json");
-
+    //this.data = this.loadFile("./Config/production.json");
+    
+    this.data = this.loadFile(path.join(__dirname, 'Config', 'production.json'));
     //this.data = Object.assign(defaultConfig, localConfig, productionConfig);
     if (this.Log > 2) {
       console.log(this.data);
