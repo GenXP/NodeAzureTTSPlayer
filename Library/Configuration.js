@@ -18,11 +18,12 @@ export class Configuration {
   }
 
   constructor() {
-    let defaultConfig = this.loadFile("./Config/default.json"); 
-    let localConfig = this.loadFile("./Config/local.json");
-    let productionConfig = this.loadFile("./Config/production.json");
+    //FIXME
+    //let defaultConfig = this.loadFile("./Config/default.json"); 
+    //let localConfig = this.loadFile("./Config/local.json");
+    this.data = this.loadFile("./Config/production.json");
 
-    this.data = Object.assign(defaultConfig, localConfig, productionConfig);
+    //this.data = Object.assign(defaultConfig, localConfig, productionConfig);
     if (this.Log > 2) {
       console.log(this.data);
     }
