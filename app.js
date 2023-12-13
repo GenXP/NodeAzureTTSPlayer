@@ -5,4 +5,4 @@ import { Configuration } from "./Library/Configuration.js";
 
 const config = new Configuration();
 const client = new BasicClient();
-client.connect(`ws://${config.Get("wsHost")}:${config.Get("wsPort")}/`, "echo-protocol");
+client.connect(`ws://localhost:8889/`, "echo-protocol");
